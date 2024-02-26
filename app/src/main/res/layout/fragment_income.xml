@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragment.IncomeFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income Source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/incomeSource"
+        android:textSize="30dp"
+        android:layout_marginTop="90dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:id="@+id/parent_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomeSource"
+        >
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bt_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_linear_layout" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_add"
+        app:layout_constraintTop_toBottomOf="@+id/bt_add"
+        android:background="#E8E6E6"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_totalincome"
+        android:hint="Total Income"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_totalincome"
+        android:id="@+id/Expend"
+        android:textSize="30dp"
+        android:layout_marginTop="40dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:id="@+id/parent_linear_layout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Expend"
+        >
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parent_linear_layout2"
+        app:layout_constraintHorizontal_bias="0.906"
+        android:src="@drawable/add"
+        android:id="@+id/bt_add2"
+        />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/bt_add2"
+        app:layout_constraintTop_toBottomOf="@+id/bt_add2"
+
+        android:background="#E8E6E6"
+        android:layout_marginTop="20dp"
+        android:id="@+id/total_expend_textview"
+        android:hint="Total Expenses"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_expend_textview"
+        android:layout_marginTop="30dp"
+        android:text="Add to Database"
+        android:id="@+id/btn_addDatabase"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

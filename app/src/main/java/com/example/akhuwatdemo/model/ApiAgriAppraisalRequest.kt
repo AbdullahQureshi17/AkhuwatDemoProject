@@ -1,0 +1,32 @@
+package com.example.akhuwatdemo.model
+
+data class ApiAgriAppraisalRequest(
+    var AgriLoanProductRequest: List<AgriLoanProductRequest>,
+    var AgriLoanUtilizationRequest: List<AgriLoanUtilizationRequest>,
+    var ApAgriAppraisalTypeIDHash: String,
+    var ApAgriAvailableAmount: Int,
+    var ApAgriExpectedExpenses: Int,
+    var ApAgriExpectedIncome: Int,
+    var ApAgriExpectedProduction: String,
+    var ApAgriExpectedSale: Int,
+    var ApAgriIrrigationSourceTypeIDHash: String,
+    var ApAgriIsLaserLevel: Boolean,
+    var ApAgriIsOwner: Boolean,
+    var ApAgriIsSoilAnalysis: Boolean,
+    var ApAgriIsTenant: Boolean,
+    var ApAgriLandAddress: String,
+    var ApAgriLandArea: Int,
+    var ApAgriLandAreaAcre: Int,
+    var ApAgriLandAreaTypeIDHash: String,
+    val ApAgriLatitude: Int,
+    val ApAgriLongitude: Int,
+    var ApAgriOwnedArea: Int,
+    var ApAgriOwnedAreaAcre: Int,
+    var ApAgriOwnedAreaTypeIDHash: String,
+    var ApAgriRequiredAmount: Int,
+    var ApAgriTenancyArea: Int,
+    var ApAgriTenancyAreaAcre: Int,
+    var ApAgriTenancyAreaTypeIDHash: String,
+    val ApAgriTotalAmount: Int,
+    var ApplicationIDHash: String
+)

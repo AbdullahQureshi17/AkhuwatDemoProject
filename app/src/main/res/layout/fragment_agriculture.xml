@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AgricultureFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Agriculture Appraisal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_agriculture"
+        android:layout_marginTop="160dp"
+        />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_agriculture"
+        app:layout_constraintEnd_toStartOf="@+id/tv_agriculture"
+        app:layout_constraintTop_toTopOf="@+id/tv_agriculture"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/img_back"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Appraisal Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_back"
+        android:textStyle="bold"
+        android:id="@+id/tv_appraisalType"
+        />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_appraisalType"
+        app:layout_constraintStart_toStartOf="@+id/tv_appraisalType"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_appraisalType"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Farmer Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_appraisalType"
+        android:textStyle="bold"
+        android:id="@+id/tv_farmerType"
+        />
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:background="#E1DDDD"
+        app:layout_constraintTop_toBottomOf="@+id/tv_farmerType"
+        app:layout_constraintStart_toStartOf="@+id/tv_farmerType"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_farmerType"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Agri Land Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_farmerType"
+        android:textStyle="bold"
+        android:id="@+id/tv_agriLandType"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="28dp"
+        android:text="Agri Area Size"
+        app:layout_constraintStart_toEndOf="@+id/tv_agriLandType"
+        app:layout_constraintTop_toBottomOf="@+id/sp_farmerType"
+        android:textStyle="bold"
+        android:id="@+id/tv_agriAreaSize"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_agriLandType"
+        app:layout_constraintStart_toStartOf="@+id/tv_agriLandType"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_agriLandType"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/tv_agriAreaSize"
+        app:layout_constraintStart_toEndOf="@+id/sp_agriLandType"
+        app:layout_constraintStart_toStartOf="@+id/tv_agriAreaSize"
+        android:id="@+id/et_agriAreaSize"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Owned Area Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_agriLandType"
+        android:textStyle="bold"
+        android:id="@+id/tv_ownedAreaType"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_ownedAreaSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="Owned Area Size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_ownedAreaType"
+        app:layout_constraintTop_toTopOf="@+id/tv_ownedAreaType" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ownedAreaType"
+        app:layout_constraintStart_toStartOf="@+id/tv_agriLandType"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_ownedAreaType"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ownedAreaSize"
+        app:layout_constraintStart_toEndOf="@+id/sp_agriLandType"
+        app:layout_constraintStart_toStartOf="@+id/tv_ownedAreaSize"
+        android:id="@+id/et_ownedAreaSize"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Tenancy Area Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_ownedAreaType"
+        android:textStyle="bold"
+        android:id="@+id/tv_tenancyAreaType"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_tenancyAreaSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Tenancy Area Size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_tenancyAreaType"
+        app:layout_constraintTop_toTopOf="@+id/tv_tenancyAreaType" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tenancyAreaType"
+        app:layout_constraintStart_toStartOf="@+id/tv_agriLandType"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_tenancyAreaType"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tenancyAreaSize"
+        app:layout_constraintStart_toEndOf="@+id/sp_tenancyAreaType"
+        app:layout_constraintStart_toStartOf="@+id/tv_tenancyAreaSize"
+        android:id="@+id/et_tenancyAreaSize"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Irrigation Source"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_tenancyAreaType"
+        android:textStyle="bold"
+        android:id="@+id/tv_irrigationSource"
+        />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_irrigationSource"
+        app:layout_constraintStart_toStartOf="@+id/tv_irrigationSource"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_irrigationSource"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Water Analysis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_irrigationSource"
+        android:textStyle="bold"
+        android:id="@+id/tv_waterAnalysis"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_waterAnalysis"
+        app:layout_constraintStart_toStartOf="@id/tv_waterAnalysis"
+        app:layout_constraintTop_toBottomOf="@id/tv_waterAnalysis"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Soil Analysis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_waterAnalysis"
+        android:textStyle="bold"
+        android:id="@+id/tv_soilAnalysis"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_soilAnalysis"
+        app:layout_constraintStart_toStartOf="@id/tv_soilAnalysis"
+        app:layout_constraintTop_toBottomOf="@id/tv_soilAnalysis"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/rb_soilYes"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/rb_soilNo"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Laser Level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_soilAnalysis"
+        android:textStyle="bold"
+        android:id="@+id/tv_laserLevel"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_laserLevel"
+        app:layout_constraintStart_toStartOf="@id/tv_laserLevel"
+        app:layout_constraintTop_toBottomOf="@id/tv_laserLevel"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/rb_laserYes"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/rb_laserNo"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Agriculture Land Complete Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_laserLevel"
+        android:textStyle="bold"
+        android:id="@+id/tv_agricultureAlandCompleteAddress"
+        />
+
+    <EditText
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_agricultureAlandCompleteAddress"
+        app:layout_constraintStart_toStartOf="@+id/tv_agricultureAlandCompleteAddress"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_agriculturelandCompleteAddress"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/et_agriculturelandCompleteAddress"
+        app:layout_constraintTop_toBottomOf="@+id/et_agriculturelandCompleteAddress"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="12dp"
+        android:id="@+id/cl_cropInfo"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/linear_layout_cropInfo"
+            >
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_control_point_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_cropInfo"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/iv_addd2"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Loan Purpose / Utilization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_cropInfo"
+        android:textStyle="bold"
+        android:id="@+id/tv_loanPurposeUtilization"
+        />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tv_loanPurposeUtilization"
+            app:layout_constraintTop_toBottomOf="@+id/tv_loanPurposeUtilization"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="12dp"
+            android:id="@+id/cv_loanPurpose"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/linear_layout_loanPurpose"
+                >
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_control_point_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_loanPurpose"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/iv_addd"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount ="
+                app:layout_constraintEnd_toEndOf="@+id/iv_addd"
+                app:layout_constraintTop_toBottomOf="@id/iv_addd"
+                android:textColor="#1F8F24"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Expected Production"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_loanPurpose"
+        android:textStyle="bold"
+        android:id="@+id/tv_expectedProduction"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="28dp"
+        android:text="Expected Sale"
+        app:layout_constraintStart_toEndOf="@+id/tv_expectedProduction"
+        app:layout_constraintTop_toBottomOf="@+id/cv_loanPurpose"
+        android:textStyle="bold"
+        android:id="@+id/tv_expectedSale"
+        />
+
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expectedProduction"
+        app:layout_constraintStart_toStartOf="@+id/tv_expectedProduction"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_expectedProduction"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expectedSale"
+        app:layout_constraintStart_toEndOf="@+id/et_expectedProduction"
+        app:layout_constraintStart_toStartOf="@+id/tv_expectedSale"
+        android:id="@+id/et_expectedSale"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Expected Expenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_expectedProduction"
+        android:textStyle="bold"
+        android:id="@+id/tv_expectedExpenses"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_expectedIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:text="Expected Income"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_expectedExpenses"
+        app:layout_constraintTop_toTopOf="@+id/tv_expectedExpenses" />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expectedExpenses"
+        app:layout_constraintStart_toStartOf="@+id/tv_expectedExpenses"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_expectedExpenses"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_expectedIncome"
+        app:layout_constraintStart_toEndOf="@+id/et_expectedExpenses"
+        app:layout_constraintStart_toStartOf="@+id/tv_expectedIncome"
+        android:id="@+id/et_expectedIncome"
+        android:layout_marginTop="7dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Available Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_expectedIncome"
+        android:textStyle="bold"
+        android:id="@+id/tv_availableAmount"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_requiredAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:text="Required Amount"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_availableAmount"
+        app:layout_constraintTop_toTopOf="@+id/tv_availableAmount" />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_availableAmount"
+        app:layout_constraintStart_toStartOf="@+id/tv_availableAmount"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_availableAmount"
+
+        />
+
+    <EditText
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_requiredAmount"
+        app:layout_constraintStart_toEndOf="@+id/et_availableAmount"
+        app:layout_constraintStart_toStartOf="@+id/tv_requiredAmount"
+        android:id="@+id/et_requiredAmount"
+        android:layout_marginTop="7dp"
+        />
+
+    <Button
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="SAVE APPRAISAL"
+        app:layout_constraintTop_toBottomOf="@+id/et_availableAmount"
+        android:backgroundTint="#1F8F24"
+        android:layout_marginTop="18dp"
+        android:id="@+id/btn_saveAppraisal"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

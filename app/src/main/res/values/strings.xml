@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AkhuwatDemo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Income">
+        <item>"Choose Income"</item>
+        <item>Business</item>
+        <item>Salary</item>
+        <item>Ecommerce</item>
+        <item>Marketing</item>
+    </string-array>
+
+    <string-array name="Expend">
+        <item>"Choose Expense"</item>
+        <item>Rent</item>
+        <item>Grocery</item>
+        <item>Bills</item>
+        <item>Payments</item>
+    </string-array>
+    <string name="title_activity_google_map_current_location">GoogleMapCurrentLocationActivity
+    </string>
+
+
+</resources>

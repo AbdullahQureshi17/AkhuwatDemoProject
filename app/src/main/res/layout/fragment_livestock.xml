@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.LivestockFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Livestock Appraisal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="160dp"
+        android:id="@+id/tv_livestock"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_livestock"
+        app:layout_constraintEnd_toStartOf="@+id/tv_livestock"
+        app:layout_constraintTop_toTopOf="@+id/tv_livestock"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/img_back"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Business Place"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_back"
+        android:textStyle="bold"
+        android:id="@+id/tv_businessplace"
+        />
+    
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_businessplace"
+        app:layout_constraintStart_toStartOf="@+id/tv_businessplace"
+        android:layout_marginTop="7dp"
+        android:id="@+id/sp_businessplace"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_businessplace"
+        android:text="Available Live Stock"
+        android:textColor="#1F8F24"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginTop="7dp"
+        android:id="@+id/tv_availableStock"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_availableStock"
+        app:layout_constraintStart_toStartOf="@+id/tv_businessplace"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/cv_available_livestock"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            >
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Stock Type"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.023"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:id="@+id/tv_stocktype"-->
+
+<!--                />-->
+<!--            <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                android:layout_width="355dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_stocktype"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_stocktype"-->
+<!--                android:id="@+id/sp_stocktype"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Quantity"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_stocktype"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/sp_stocktype"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:id="@+id/tv_quantity"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="136dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:text="Amount"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_quantity"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/sp_stocktype" />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="165dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="0"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_quantity"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_quantity"-->
+<!--                android:id="@+id/et_quantity"-->
+
+<!--                />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="165dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:text="0"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/et_quantity"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_quantity"-->
+<!--                android:id="@+id/et_amount"-->
+<!--                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/linear_layout_quantity_amount"
+                >
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_control_point_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_quantity_amount"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/iv_add"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount ="
+                app:layout_constraintEnd_toEndOf="@+id/iv_add"
+                app:layout_constraintTop_toBottomOf="@id/iv_add"
+                android:textColor="#1F8F24"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_available_livestock"
+        android:text="Utilization of Loan"
+        android:textColor="#1F8F24"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginTop="7dp"
+        android:id="@+id/tv_utilization"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_utilization"
+        app:layout_constraintStart_toStartOf="@+id/tv_businessplace"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/cv_utilization"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            >
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Stock Type"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.023"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:id="@+id/tv_stocktype2"-->
+
+<!--                />-->
+<!--            <androidx.appcompat.widget.AppCompatSpinner-->
+<!--                android:layout_width="355dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_stocktype2"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_stocktype2"-->
+<!--                android:id="@+id/sp_stocktype2"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Quantity"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_stocktype2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/sp_stocktype2"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:id="@+id/tv_quantity2"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="136dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:text="Amount"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/tv_quantity2"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/sp_stocktype2" />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="165dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:text="0"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_quantity2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_quantity2"-->
+<!--                android:id="@+id/et_quantity2"-->
+
+<!--                />-->
+
+<!--            <EditText-->
+<!--                android:layout_width="165dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:text="0"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/et_quantity2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_quantity2"-->
+<!--                android:id="@+id/et_amount2"-->
+<!--                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/linear_layout_quantity_amount2"
+                >
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_control_point_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_quantity_amount2"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/iv_add2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount ="
+                app:layout_constraintEnd_toEndOf="@+id/iv_add2"
+                app:layout_constraintTop_toBottomOf="@id/iv_add2"
+                android:textColor="#1F8F24"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/cv_utilization"
+        android:text="Current Monthly Profit"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cv_utilization"
+        android:id="@+id/tv_currentMonthlyProfit"
+        android:layout_marginTop="7dp"
+        />
+    <EditText
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentMonthlyProfit"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/tv_currentMonthlyProfit"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_currentMonthlyProfit"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/cv_utilization"
+        android:text="Expected increase in Income"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_currentMonthlyProfit"
+        android:id="@+id/tv_expectedIncrease"
+        android:layout_marginTop="7dp"
+        />
+    <EditText
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_currentMonthlyProfit"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@id/tv_expectedIncrease"
+        android:layout_marginTop="7dp"
+        android:id="@+id/et_expectedIncrease"
+        />
+
+    <Button
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="SAVE APPRAISAL"
+        app:layout_constraintTop_toBottomOf="@+id/et_expectedIncrease"
+        android:backgroundTint="#1F8F24"
+        android:layout_marginTop="12dp"
+        android:id="@+id/saveAppraisal"
+        />
+
+    <Button
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="FETCH APPRAISAL"
+        app:layout_constraintTop_toBottomOf="@+id/saveAppraisal"
+        android:backgroundTint="#1F8F24"
+        android:layout_marginTop="12dp"
+        android:id="@+id/fetchAppraisal"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
