@@ -54,7 +54,7 @@ class AgricultureFragment : Fragment(R.layout.fragment_agriculture), DataRespons
     private lateinit var agriAppraisalList : List<ResultXXXXXXX>
     private lateinit var farmSeasonTypeList : List<ResultXXXXXXXXXXX>
     private var farmerTypeList : ArrayList<FarmerType> = ArrayList()
-
+private lateinit var a : TextView
     private lateinit var AreaTypeList : List<ResultXXXXXXXX>
     private lateinit var IrrigationSourceTypeList : List<ResultXXXXXXXXX>
     private lateinit var LoanPurposeTypeList : List<ResultXXXXXXXXXX>
